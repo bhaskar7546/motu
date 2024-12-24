@@ -1,0 +1,33 @@
+Q5. Collaboration and Remote Repositories
+Fetch the latest changes from a remote repository and rebase your local branch onto the updated remote branch.
+
+1. Fetch the latest changes from the remote repository:
+
+git fetch
+This command fetches the latest changes from the remote repository without automatically merging them into your local branches.
+
+2. Rebase your local branch onto the updated remote branch:
+
+Assuming you are currently on the branch you want to update (replace your-branch with the actual name of your branch):
+
+git rebase origin/your-branch
+This command applies your local commits on top of the changes fetched from the remote branch. If conflicts arise, Git will pause the rebase process and ask you to resolve them. Alternatively, you can use the interactive rebase to review and modify commits during the rebase:
+
+git rebase -i origin/your-branch
+This opens an editor where you can pick, squash, or edit individual commits.
+
+3. Continue the rebase or resolve conflicts:
+
+If conflicts occurred during the rebase, Git will prompt you to resolve them. After resolving conflicts, you can continue the rebase with:
+
+git rebase --continue
+If you decide to abort the rebase at any point, you can use:
+
+git rebase --abort
+4. Push the rebased branch to the remote repository:
+
+After successfully rebasing your local branch, you may need to force-push the changes to the remote repository:
+
+git push origin your-branch --force
+Be cautious with force-pushing, especially if others are working with the same branch, as it rewrites the commit history. Now, your local branch is rebased onto the updated remote branch. Keep in mind that force-pushing should be done with caution, especially on shared branches, to avoid disrupting collaborative work.
+

@@ -1,0 +1,13 @@
+Q11. Analyzing and Changing Git History
+Write the command to display the last five commits in the repository’s history.
+
+To display the last five commits in the repository’s history, you can use the following git log command with the -n option:
+
+git log -n 5
+This command shows the latest five commits in the repository, with the most recent commit displayed at the top. Adjust the number after the -n option if you want to see a different number of commits.
+
+If you want a more concise output, you can use the --oneline option:
+
+git log -n 5 --oneline
+This provides a one-line summary for each commit, including the abbreviated commit hash and the commit message.
+

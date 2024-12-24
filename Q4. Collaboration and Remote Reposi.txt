@@ -1,0 +1,16 @@
+Q4. Collaboration and Remote Repositories
+Clone a remote Git repository to your local machine.
+
+To clone a remote Git repository to your local machine, you can use the git clone command. Here’s the general syntax:
+
+git clone <repository_url>
+Replace <repository_url> with the actual URL of the Git repository you want to clone. For example:
+
+git clone https://github.com/example/repo.git
+This command will create a new directory with the name of the repository and download all the files from the remote repository into that directory. If the repository is private and requires authentication, you might need to use the SSH URL or provide your credentials during the cloning process.
+
+For SSH:
+
+git clone git@github.com:example/repo.git
+After running the git clone command, you’ll have a local copy of the remote repository on your machine, and you can start working with the code.
+

@@ -1,0 +1,16 @@
+Q6. Collaboration and Remote Repositories
+Write the command to merge “feature-branch” into “master” while providing a custom commit message for the merge.
+
+To merge “feature-branch” into “master” and provide a custom commit message, you can use the following command:
+
+git merge feature-branch -m "Your custom commit message"
+Replace “Your custom commit message” with the actual message you want to use for the merge commit. This command performs the merge and creates a new commit on the “master” branch with the specified message. If there are no conflicts, Git will complete the merge automatically.
+
+If conflicts occur during the merge, Git will pause and prompt you to resolve the conflicts manually. After resolving conflicts, you can continue the merge process with:
+
+git merge --continue
+Alternatively, you can use an interactive merge to modify the commit message before finalizing the merge:
+
+git merge feature-branch --no-ff -e
+This opens an editor where you can edit the commit message before completing the merge. Again, replace “feature-branch” with the name of your actual feature branch.
+

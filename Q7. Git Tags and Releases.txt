@@ -1,0 +1,19 @@
+Q7. Git Tags and Releases
+Write the command to create a lightweight Git tag named “v1.0” for a commit in your local repository.
+
+
+To create a lightweight Git tag named “v1.0” for a specific commit in your local repository, you can use the following command:
+
+git tag v1.0 <commit_hash>
+Replace <commit_hash> with the actual hash of the commit for which you want to create the tag.
+
+For example, if you want to tag the latest commit, you can use the following:
+
+git tag v1.0 HEAD
+This creates a lightweight tag pointing to the specified commit. Lightweight tags are simply pointers to specific commits and contain only the commit checksum.
+
+If you want to push the tag to a remote repository, you can use:
+
+git push origin v1.0
+This command pushes the tag named “v1.0” to the remote repository. Keep in mind that Git tags, by default, are not automatically pushed to remotes, so you need to explicitly push them if needed.
+

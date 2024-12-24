@@ -1,0 +1,19 @@
+Q8. Advanced Git Operations
+
+Write the command to cherry-pick a range of commits from “source-branch” to the current branch.
+
+To cherry-pick a range of commits from “source-branch” to the current branch, you can use the following command:
+
+git cherry-pick <start-commit>^..<end-commit>
+Replace <start-commit> and <end-commit> with the commit hashes or references that define the range of commits you want to cherry-pick. The ^ (caret) symbol is used to exclude the starting commit itself from the range.
+
+For example, if you want to cherry-pick the commits from commit A to commit B (excluding A) from “source-branch” to the current branch, you would run:
+
+git cherry-pick A^..B
+After running this command, Git will apply the specified range of commits onto your current branch. If there are any conflicts, Git will pause the cherry-pick process and ask you to resolve them. After resolving conflicts, you can continue the cherry-pick with:
+
+git cherry-pick --continue
+If you encounter issues and need to abort the cherry-pick operation, you can use:
+
+git cherry-pick --abort
+Remember that cherry-picking introduces new commits based on the changes from the source branch, so conflicts may arise, and manual intervention might be required.

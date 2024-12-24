@@ -1,0 +1,13 @@
+Q12. Analyzing and Changing Git History
+Write the command to undo the changes introduced by the commit with the ID “abc123”.
+
+
+To undo the changes introduced by a specific commit with the ID “abc123,” you can use the git revert command. The git revert command creates a new commit that undoes the changes made in a previous commit. Here’s the command:
+
+git revert abc123
+Replace “abc123” with the actual commit hash or commit reference of the commit you want to undo. After running this command, Git will open a text editor for you to provide a commit message for the new revert commit.
+
+Alternatively, if you want to completely remove a commit and all of its changes from the commit history, you can use the git reset command. However, keep in mind that using git reset can rewrite history and should be used with caution, especially if the commit has been pushed to a remote repository.
+
+git reset --hard abc123
+Again, replace “abc123” with the actual commit hash or commit reference. After using git reset --hard, your working directory will be modified to match the specified commit, discarding all commits made after it. Be cautious when using --hard as it is a forceful operation and can lead to data loss.

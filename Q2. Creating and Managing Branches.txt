@@ -1,0 +1,28 @@
+Q2. Creating and Managing Branches
+Create a new branch named “feature-branch.” Switch to the “master” branch. Merge the “feature-branch” into “master.”
+
+1. Create a new branch named “feature-branch”:
+
+git branch feature-branch
+Alternatively, you can create and switch to the new branch in one step:
+
+git checkout -b feature-branch
+2. Switch to the “master” branch:
+
+git checkout master
+3. Merge “feature-branch” into “master”:
+
+git merge feature-branch
+If there are no conflicts, Git will automatically perform a fast-forward merge. If there are conflicts, Git will prompt you to resolve them before completing the merge. If you used git checkout -b feature branch to create and switch to the new branch, you can switch back to master and merge in a single command:
+
+git checkout master
+git merge feature-branch
+4. Resolve any conflicts (if needed) and commit the merge: If there are conflicts, Git will mark the conflicted files. Open each conflicted file, resolve the conflicts, and then:
+
+git add
+git commit -m "Merge feature-branch into master"
+Now, the changes from “feature-branch” are merged into the “master” branch. If you no longer need the “feature-branch,” you can delete it:
+
+git branch -d feature-branch
+This assumes that the changes in “feature-branch” do not conflict with changes in the “master” branch. If conflicts arise during the merge, you’ll need to resolve them manually before completing the merge.
+

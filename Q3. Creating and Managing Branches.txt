@@ -1,0 +1,31 @@
+Q3. Creating and Managing Branches
+Write the commands to stash your changes, switch branches, and then apply the stashed changes.
+
+1. Stash your changes:
+
+git stash save "Your stash message"
+This command will save your local changes in a temporary area, allowing you to switch branches without committing the changes.
+
+2. Switch to another branch:
+
+git checkout your-desired-branch
+3. Apply the stashed changes:
+
+git stash apply
+If you have multiple stashes and want to apply a specific stash, you can use:
+
+git stash apply stash@{1}
+After applying the stash, your changes are reapplied to the working directory.
+
+4. Remove the applied stash (optional):
+
+If you no longer need the stash after applying it, you can remove it:
+
+git stash drop
+To remove a specific stash:
+
+git stash drop stash@{1}
+If you want to apply and drop in one step, you can use git stash pop:
+
+git stash pop
+Now, you’ve successfully stashed your changes, switched branches, and applied the stashed changes.

@@ -1,0 +1,8 @@
+Q10. Analyzing and Changing Git History
+Write the command to list all commits made by the author “JohnDoe” between “2023-01-01” and “2023 12-31.”
+
+To list all commits made by the author “JohnDoe” between “2023-01-01” and “2023-12-31,” you can use the following git log command with the --author and --since / --until options:
+
+git log --author="JohnDoe" --since="2023-01-01" --until="2023-12-31"
+This command will display the commit history that meets the specified criteria. Adjust the author name and date range according to your requirements. The --since and --until options accept a variety of date and time formats, providing flexibility in specifying the date range.
+

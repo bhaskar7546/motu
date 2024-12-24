@@ -1,0 +1,20 @@
+Q9. Analyzing and Changing Git History
+Given a commit ID, how would you use Git to view the details of that specific commit, including the author, date, and commit message?
+
+
+To view the details of a specific commit, including the author, date, and commit message, you can use the following Git command:
+
+git show <commit-id>
+Replace <commit-id> with the actual commit hash or commit reference of the commit you want to inspect.
+
+For example:
+
+git show abc123
+This command will display detailed information about the specified commit, including the author, date, commit message, and the changes introduced by that commit.
+
+If you only want a more concise summary of the commit information (without the changes), you can use:
+
+git log -n 1 --pretty=format:"%h - %an, %ar : %s" <commit-id>
+This command displays a one-line summary of the commit, showing the abbreviated commit hash (%h), author name (%an), relative author date (%ar), and commit message (%s).
+
+Remember to replace <commit-id> with the actual commit hash or reference you want to inspect.

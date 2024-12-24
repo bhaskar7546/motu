@@ -1,0 +1,22 @@
+Q1. Setting Up and Basic Commands
+Initialize a new Git repository in a directory. Create a new file and add it to the staging area and commit the changes with an appropriate commit message.
+
+1. Initialize a new Git repository:
+
+mkdir your_project_directory
+cd your_project_directory
+git init
+2. Create a new file:
+
+touch your_new_file.txt
+3. Add the file to the staging area:
+
+git add your_new_file.txt
+If you want to add all new and modified files to the staging area, you can use:
+
+git add
+4. Commit the changes with a message:
+
+git commit -m "Initial commit - adding a new file"
+
+
